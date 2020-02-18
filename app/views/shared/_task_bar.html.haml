@@ -1,0 +1,51 @@
+.side-bar
+  -# .user
+  -#   .top-items
+  -#     %p.top-items__name
+  -#       俺
+  -#     %p.top-items__ach-rate
+  -#       達成率：20%
+  -#     %p.top-items__d-line
+  -#       残り：3日
+  -#     %ul.top-items__icons
+  -#       %li.user-edit
+  -#       = icon('fas','user-edit', class: 'new-group')
+  .task-list
+    .sort
+      %p.sort__importance
+        重要度
+        %li.importance-lank
+          %ul.lank-SSplus
+            SSランク+
+          %ul.lank-S
+            Sランク
+          %ul.lank-A
+            Aランク
+          %ul.lank-B
+            Bランク
+          %ul.lank-C
+            Cランク
+      %p.sort__star
+        難易度別
+        %li.ster-characters
+          %ul.sters-5plus
+            ★★★★★+
+          %ul.sters-4
+            ★★★★
+          %ul.sters-3
+            ★★★
+          %ul.sters-2
+            ★★
+          %ul.sters-1
+            ★
+      %p.sort__d-line
+        期限別
+        %li.d-line-limit
+          %ul.limit-none
+            期限なし
+          %ul.limit-year
+            残り1年以内
+          %ul.limit-month
+            残り1ヶ月以内
+          %ul.limit-week
+            残り1週間以内
