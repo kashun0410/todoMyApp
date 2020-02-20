@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'todo_lists/index'
-
-  root "todo_lists#index"
+  devise_for :users
+  
+  root 'todo_lists#index'
+  resources :users, only: [:edit, :update]
 end
