@@ -2,9 +2,10 @@
   To-Do
 .user
   .user__name
-    俺
+    = current_user.name
     .user__name__edit
-      = icon('fas','user-edit')
+      = link_to edit_user_path(current_user) do
+        = icon('fas','user-edit')
   .achievement
     .achievement__percent
       達成率

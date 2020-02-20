@@ -21,7 +21,7 @@
     &__name {
       height: 40px;
       width: 200px;
-      font-size: 25px;
+      font-size: 20px;
       margin: auto;
       line-height: 40px;
       text-align: start;
@@ -34,7 +34,7 @@
         display: flex;
         justify-content: flex-end;
         position: absolute;
-        bottom: 7px;
+        bottom: 2px;
         right: 0;
       }
     }
@@ -141,5 +141,10 @@
         font-size: 15px;
       }
     }
+  }
+  .task:hover {
+    color: #ffffff;
+    background-color: #ff7c5c;
+    border-left: solid 10px #ffffff;
   }
 }
