@@ -1,51 +1,14 @@
 .main-list
-  .task
-    .task__title
-      件のアプリを完成させよ。
-    .task__option
-      %p.task__option__lank
-        Sランク
-      %p.task__option__star
-        ★★★★★
-      %p.task__option__d-line
-        2月22日まで
-  .task
-    .task__title
-      件のアプリを完成させよ。
-    .task__option
-      %p.task__option__lank
-        Sランク
-      %p.task__option__star
-        ★★★★★
-      %p.task__option__d-line
-        2月22日まで
-  .task
-    .task__title
-      件のアプリを完成させよ。
-    .task__option
-      %p.task__option__lank
-        Sランク
-      %p.task__option__star
-        ★★★★★
-      %p.task__option__d-line
-        2月22日まで
-  .task
-    .task__title
-      件のアプリを完成させよ。
-    .task__option
-      %p.task__option__lank
-        Sランク
-      %p.task__option__star
-        ★★★★★
-      %p.task__option__d-line
-        2月22日まで
-  .task
-    .task__title
-      件のアプリを完成させよ。
-    .task__option
-      %p.task__option__lank
-        Sランク
-      %p.task__option__star
-        ★★★★★
-      %p.task__option__d-line
-        2月22日まで
+  - @todoLists.each do |todo_list|
+    .task
+      .task__title
+        = todo_list.title
+      .task__content
+        = todo_list.content
+      -# .task__option
+      -#   %p.task__option__lank
+      -#     = todo_list.lank
+      -#   %p.task__option__star
+      -#     = todo_list.star
+      -#   %p.task__option__d-line
+      -#     = todo_list.d_line
