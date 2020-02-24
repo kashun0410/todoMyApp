@@ -1,16 +1,6 @@
 .side-bar
-  -# .user
-  -#   .top-items
-  -#     %p.top-items__name
-  -#       俺
-  -#     %p.top-items__ach-rate
-  -#       達成率：20%
-  -#     %p.top-items__d-line
-  -#       残り：3日
-  -#     %ul.top-items__icons
-  -#       %li.user-edit
-  -#       = icon('fas','user-edit', class: 'new-group')
   .task-list
+    = link_to "新規作成", '/todo_lists/new', class: "edit-task"
     .sort
       %p.sort__importance
         重要度

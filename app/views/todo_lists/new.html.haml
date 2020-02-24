@@ -1,0 +1,17 @@
+.header
+  = render "shared/header_main"
+.new-task
+  .new-task__title
+    新規作成
+  .contents
+    = form_for @todoLists, class: :contents__form do |f|
+      = f.text_field :title, placeholder: :タイトル, class: :contents__form__title
+      = f.text_area :content, placeholder: :詳細, class: :contents__form__details
+      = f.submit "送信する", class: :contents__form__btn
+    -# .option
+    -#   .option__lank
+    -#     重要度
+    -#   .option__ster
+    -#     難易度
+    -#   .option__d-line
+    -#     期限
