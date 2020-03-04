@@ -1,21 +1,27 @@
-#account-page.account-page
-  .account-page__inner.clearfix
-    .account-page__inner--left.account-page__header
-      %h2 Log in
-      %h5 登録しているユーザーでログイン
-      = render "devise/shared/links"
-    .account-page__inner--right.user-form
+.account-page
+  = render "devise/shared/header"
+  .account-page__content
+    .contents
+      %h2.contents__head
+        アカウントをお持ちでない方はこちら
+        .contents__head__create
+          = link_to "新規会員登録", new_registration_path(resource_name)
+      -# .contents__inner
+      -#   %button#facebook-login.contents__inner__facebook
+      -#     = icon('fab','facebook-square')
+      -#     Facebookでログイン
+      -#   %button#google-login.contents__inner__google
+      -#     Googleでログイン
+      -#     = icon('fab','google')
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .field
-          .field-label
-            = f.label :email
-          .field-input
-            = f.email_field :email, autofocus: true
+          .field__input
+            = f.email_field :email, placeholder: 'メールアドレス', autofocus: true
           .field
-            .field-label
-              = f.label :password
-              %i (英数字8文字以上)
-            .field-input
-              = f.password_field :password, autocomplete: "off"
+            .field__input
+              = f.password_field :password, placeholder: 'パスワード', autocomplete: "off"
           .actions
-            = f.submit "Log in", class: 'btn'
+            = f.submit "ログイン", class: 'action'
+          .pw__missing
+            = link_to "パスワードをお忘れの方", '#'
+  = render "devise/shared/footer"
