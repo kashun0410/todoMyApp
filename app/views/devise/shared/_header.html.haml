@@ -1,5 +1,4 @@
 .account-page__header
-  = link_to 'FURIMA', root_path, class: 'btn'
-  = render 'devise/shared/links'
+  = link_to 'To-Do', root_path, class: 'account-page__header__root'
 - if user_signed_in?
-  = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+  = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'account-page__header__login-out'

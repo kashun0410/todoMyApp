@@ -1,7 +1,7 @@
 .account-page
   .account-page__header
-    = link_to 'FURIMA', root_path, class: 'btn'
-    = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+    = link_to 'To-Do', root_path, class: 'account-page__header__root'
+    = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'account-page__header__login-out'
   .account-page__content
     .contents
       %h2.contents__head

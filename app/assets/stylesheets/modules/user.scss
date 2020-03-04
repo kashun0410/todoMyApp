@@ -1,13 +1,38 @@
+@mixin button-base {
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 50px;
+  height: 50px;
+  width: 330px;
+  margin-top: 15px;
+  border: 1px solid transparent;
+  position: relative;
+  i {
+    font-size: 26px;
+    position: absolute;
+    top: 10px;
+    left: 16px;
+  }
+}
+
 .account-page {
+  background-color: #eee;
   &__header {
-    background-color: #3CCACE;
     height: 100px;
     text-align: center;
     padding-top: 40px;
-    .btn {
-      height: 100px;
-      width: 100px;
-      display: contents;
+    display: flex;
+    justify-content: space-between;
+    &__root {
+      width: 200px;
+      font-size: 30px;
+      display: block;
+      text-decoration: none;
+      margin: 0 auto;
+    }
+    &__user-manage, &__login-out {
+      float: right;
+      @extend .account-page__header__root
     }
   }
   &__content {
@@ -15,21 +40,46 @@
     background-color: #eeeeee;
     .contents {
       height: 100vh;
-      width: 700px;
+      width: 460px;
       background-color: #f8f8f8;
       margin: 0 auto;
       &__head {
-        font-size: 22px;
+        font-size: 14px;
         text-align: center;
-        padding: 32px;
+        padding: 40px 65px;
         border-bottom: solid 1px #eeeeee;
+        &__create {
+          display: block;
+          margin: 8px 0 0;
+          border: solid 1px #0099e8;
+          background-color: #0099e8;
+          line-height: 40px;
+          a {
+            text-decoration: none;
+            color: #fff;
+          }
+        }
+      }
+      &__inner {
+        padding: 40px 65px;
+        &__facebook {
+          @include button-base;
+          background-color: #385185;
+          color: #fff;
+        }
+        &__google {
+          @include button-base;
+          background-color: #fff;
+          color: #222222;
+          border: solid 1px #222222;
+        }
       }
     }
   }
 }
 
 form {
-  padding: 40px 100px 60px;
+  padding: 25px 65px 35px;
   .field {
     margin-bottom: 10px;
     &__label {
@@ -37,20 +87,32 @@ form {
       letter-spacing: 1px;
       font-size: 14px;
       font-weight: 200;
+      display: contents;
+    }
+    span {
+      background-color: #ea352d;
+      color: #f8f8f8;
+      margin: 0 0 0 4px;
+      padding: 2px 4px;
+      font-size: 15px;
     }
     &__input {
       input {
         width: 100%;
+        margin: 25px 0;
         padding: 10px;
         letter-spacing: 1px;
+        margin-top: 8px;
       }
     }
   }
   .actions {
-    padding: 60px 150px;
+    margin: 24px 0;
     display: grid;
     .action {
       display: inline-block;
+      background-color: #ea352d;
+      color: #fff;
       height: 50px;
       padding: 0 30px;
       line-height: 50px;
@@ -58,5 +120,36 @@ form {
       text-align: center;
       border-radius: 2px;
     }
+  }
+  .pw__missing {
+    display: block;
+    margin: 40px 0 0;
+    a {
+      text-decoration: none;
+      color: #0099e8;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.page-footer {
+  width: 460px;
+  height: 220px;
+  margin: 0 auto;
+  text-align: center;
+  &__bar {
+    display: flex;
+    padding: 20px 0 0 0;
+    margin: 0 auto;
+    li {
+      margin: 0 0 0 50px;
+      font-size: 10px;
+      list-style: none;
+    }
+  }
+  &__root {
+    display: block;
+    margin: 0 auto;
   }
 }
