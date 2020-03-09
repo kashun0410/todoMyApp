@@ -2,7 +2,7 @@ class TodoListsController < ApplicationController
   # before_action :set_todoList
 
   def index
-    @todoLists = TodoList.all
+    @todoLists = TodoList.all.order(id: "DESC")
   end
 
   def new
@@ -15,6 +15,8 @@ class TodoListsController < ApplicationController
   end
 
   def show
+    @todoLists = Todolist.find_by(id: params[:id])
+    @user = User.find_by(id: @post.user_id)
   end
 
   def edit
@@ -24,11 +26,14 @@ class TodoListsController < ApplicationController
   end
 
   def destroy
+    todoList = TodoList.find(params[:id])
+    todoList.destroy
+    redirect_to root_path
   end
 
   private
   def post_params
-    params.require(:todo_list).permit(:title, :content)
+    params.require(:todo_list).permit(:title, :content).merge(user_id: current_user.id)
   end
 
 end

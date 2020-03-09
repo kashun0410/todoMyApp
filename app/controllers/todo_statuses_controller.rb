@@ -1,0 +1,2 @@
+class TodoStatusesController < ApplicationController
+end
