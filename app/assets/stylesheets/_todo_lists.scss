@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: mediumslateblue;
+}
+
 .header {
   // opacity: 0.55;
   height: 50px;
@@ -150,18 +154,21 @@
       padding-top: 10px;
     }
     &__option {
-      display: flex;
-      padding-bottom: 40px;
-      p {
-        padding: 10px;
-        font-size: 15px;
-      }
+      display: none;
     }
   }
   .task:hover {
-    height: 200px;
+    height: 250px;
     color: #ffffff;
     background-color: #ff7c5c;
     border-left: solid 10px #ffffff;
+    .task__option {
+      display: flex;
+      padding-bottom: 40px;
+      p {
+        padding: 10px 10px 0 0;
+        font-size: 15px;
+      }
+    }
   }
 }
