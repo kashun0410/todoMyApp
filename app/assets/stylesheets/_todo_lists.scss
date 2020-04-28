@@ -150,11 +150,17 @@ html {
       font-size: 20px;
     }
     &__content {
+      display: none;
+    }
+    &__option, &__creater {
       font-size: 15px;
       padding-top: 10px;
-    }
-    &__option {
-      display: none;
+      display: flex;
+      p {
+        width: 100px;
+        padding: 10px 10px 0 0;
+        font-size: 15px;
+      }
     }
   }
   .task:hover {
@@ -162,13 +168,9 @@ html {
     color: #ffffff;
     background-color: #ff7c5c;
     border-left: solid 10px #ffffff;
-    .task__option {
+    .task__content {
       display: flex;
-      padding-bottom: 40px;
-      p {
-        padding: 10px 10px 0 0;
-        font-size: 15px;
-      }
+      padding: 40px 0;
     }
   }
 }

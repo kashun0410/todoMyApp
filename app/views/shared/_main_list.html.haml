@@ -3,8 +3,9 @@
     .task
       .task__title
         = todo_list.title
-      .task__content
-        = todo_list.content
+      .task__creater
+        作成者：
+        = todo_list.user.name
       .task__option
         %p.task__option__lank
           Aランク
@@ -12,3 +13,5 @@
           ★★
         %p.task__option__d-line
           12/2まで
+      .task__content
+        = todo_list.content

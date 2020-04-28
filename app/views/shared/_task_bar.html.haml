@@ -1,6 +1,6 @@
 .side-bar
   .task-list
-    = link_to "新規作成", '/todo_lists/new', class: "edit-task"
+    = link_to "新規作成", new_todo_list_path, class: "edit-task"
     .sort
       %p.sort__importance
         重要度
