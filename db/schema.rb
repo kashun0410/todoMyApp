@@ -15,17 +15,12 @@ ActiveRecord::Schema.define(version: 20200309200152) do
   create_table "todo_lists", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "title",      limit: 65535
     t.text     "content",    limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.integer  "user_id"
-  end
-
-  create_table "todo_statuses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "lank"
     t.string   "star"
     t.string   "deadLine"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
