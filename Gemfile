@@ -69,3 +69,6 @@ gem 'devise'
 gem 'pry-rails'
 
 gem "gretel"
+
+gem 'carrierwave'
+gem 'fog-aws'
