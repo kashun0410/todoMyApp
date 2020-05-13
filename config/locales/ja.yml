@@ -1,5 +1,13 @@
 ---
 ja:
+  enums:
+    todo_list:
+      lanks:
+        D: "Dランク"
+        C: "Cランク"
+        B: "Bランク"
+        A: "Aランク"
+        S: "Sランク"
   activerecord:
     errors:
       messages:

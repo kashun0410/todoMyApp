@@ -6,12 +6,16 @@
       .task__creater
         作成者：
         = todo_list.user.name
+      .task__created_at
+        作成日：
+        = l(todo_list.created_at, format: :long)
       .task__option
         %p.task__option__lank
-          Aランク
+          = "#{todo_list.lank}ランク"
         %p.task__option__star
-          ★★
+          = "★×#{todo_list.star}"
         %p.task__option__d-line
-          12/2まで
+          = "#{todo_list.deadline_date}まで"
+        %p.task_option__limited
       .task__content
         = todo_list.content

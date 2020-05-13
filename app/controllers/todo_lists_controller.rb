@@ -1,8 +1,8 @@
 class TodoListsController < ApplicationController
-  # before_action :set_todoList
 
   def index
     @todoLists = TodoList.includes(:user)
+    time_limit
   end
 
   def new
@@ -32,7 +32,12 @@ class TodoListsController < ApplicationController
 
   private
   def post_params
-    params.require(:todo_list).permit(:title, :content).merge(user_id: current_user.id)
+    params.require(:todo_list).permit(:title, :content, :lank, :star, :deadline_date).merge(user_id: current_user.id)
+  end
+
+  def time_limit
+    require "date"
+    Date.today
   end
 
 end

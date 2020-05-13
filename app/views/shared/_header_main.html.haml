@@ -8,8 +8,6 @@
         = icon('fas','user-edit')
   .achievement
     .achievement__percent
-      達成率
     .achievement__bar
-      .achievement__bar__active
-      .achievement__bar__inactive
-  = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'user__login-out'
+      %p#header-clock
+        ※NowLoading…

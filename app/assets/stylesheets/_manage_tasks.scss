@@ -2,7 +2,7 @@
   height: 100vh;
   width: 100vw;
   padding-top: 50px;
-  background-color: azure;
+  background-color: cornsilk;
   &__title {
     padding-top: 30px;
     text-align: center;
@@ -10,7 +10,6 @@
     font-weight: bold;
   }
   .contents {
-    height: 100%;
     width: 85%;
     margin: 0 auto;
     padding-top: 30px;
@@ -25,16 +24,64 @@
       }
       &__details {
         display: block;
-        height: 300px;
+        height: 100px;
         width: 100%;
         margin-top: 20px;
       }
-      &__btn {
-        display: block;
-        width: 30%;
-        margin: 15px auto 0;
+    }
+    .option {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+      &__lank {
+        font-weight: normal;
+        padding-bottom: 20px;
+        &__select {
+          height: 30px;
+          width: 500px;
+        }
+      }
+      &__stars {
+        font-weight: normal;
+        padding-bottom: 30px;
+        input[type=radio] {
+          display: none;
+        }
+        &__label {
+          display: inline-block;
+          box-sizing: border-box;
+          font-size: 14px;
+          font-weight: normal;
+          color: #888;
+          border: solid 1px #EDBC6C;
+          border-radius: 50px;
+          margin-top: 10px;
+          padding: 3px 10px;
+          background-color: #fff;
+          cursor: pointer;
+          width: 95px;
+        }
+        &__radio:checked + .option__stars__label {
+          color: yellow;
+          border: solid 1px red;
+          background-color: blueviolet;
+        }
+      }
+      &__d-line {
+        font-weight: normal;
+        padding-bottom: 40px;
+        &__date {
+          height: 50px;
+          width: 500px;
+        }
       }
     }
+  }
+  .submit__btn {
+    display: block;
+    width: 30%;
+    margin: 15px auto 0;
   }
 }
 
