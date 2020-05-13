@@ -20,4 +20,6 @@
             = f.email_field :email
         .actions
           = f.submit "Update", class: 'action'
+        .edit__login-out
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'edit__login-out__btn'
       

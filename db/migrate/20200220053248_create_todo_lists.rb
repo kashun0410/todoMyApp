@@ -5,8 +5,7 @@ class CreateTodoLists < ActiveRecord::Migration[5.0]
       t.text :content
       t.string :lank
       t.string :star
-      t.string :deadline_month
-      t.string :deadline_day
+      t.string :deadline_date
 
       t.timestamps
     end

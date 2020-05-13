@@ -13,14 +13,13 @@
 ActiveRecord::Schema.define(version: 20200309200152) do
 
   create_table "todo_lists", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text     "title",          limit: 65535
-    t.text     "content",        limit: 65535
+    t.text     "title",         limit: 65535
+    t.text     "content",       limit: 65535
     t.string   "lank"
     t.string   "star"
-    t.string   "deadline_month"
-    t.string   "deadline_day"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.string   "deadline_date"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.integer  "user_id"
   end
 
