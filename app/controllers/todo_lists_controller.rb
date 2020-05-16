@@ -1,8 +1,7 @@
 class TodoListsController < ApplicationController
 
   def index
-    @todoLists = TodoList.includes(:user)
-    time_limit
+    @todoLists = TodoList.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -25,19 +24,15 @@ class TodoListsController < ApplicationController
   end
 
   def destroy
-    todoList = TodoList.find(params[:id])
-    todoList.destroy
+    @todoLists = TodoList.find(params[:id])
+    @todoLists.destroy
     redirect_to root_path
   end
 
   private
+
   def post_params
     params.require(:todo_list).permit(:title, :content, :lank, :star, :deadline_date).merge(user_id: current_user.id)
-  end
-
-  def time_limit
-    require "date"
-    Date.today
   end
 
 end
