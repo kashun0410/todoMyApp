@@ -1,7 +1,7 @@
 class TodoListsController < ApplicationController
 
   def index
-    @todoLists = TodoList.includes(:user).order("created_at DESC")
+    @todoLists = TodoList.order("created_at DESC").where(user_id: "#{current_user.id}")
   end
 
   def new
