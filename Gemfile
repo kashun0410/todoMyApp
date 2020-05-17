@@ -44,6 +44,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -56,7 +57,8 @@ group :development do
 end
 
 group :production do
-  gem 'unicorn', '5.4.1'
+  # gem 'unicorn', '5.4.1'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

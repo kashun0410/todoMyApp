@@ -8,7 +8,6 @@ html {
 }
 
 .header {
-  // opacity: 0.55;
   height: 50px;
   width: 100%;
   color: #111111;
@@ -74,7 +73,6 @@ html {
   padding-top: 50px;
   position: fixed;
   .task-list {
-    // height: calc(100vh - 130px);
     height: 100vh;
     width: 300px;
     background-color: #444444;
@@ -118,14 +116,14 @@ html {
       &__star {
         @extend .sort__importance
       }
-      li {
+      ul {
         list-style: none;
         margin-top: 5px;
         margin-bottom: 20px;
-        ul {
+        li {
           padding: 1px 0 5px 0;
         }
-        ul:hover {
+        li:hover {
           color: #ff7c5c;
           text-decoration: underline;
         }
