@@ -57,7 +57,7 @@ production:
 
   
   # heroku用
-  
+
   # <<: *default
   # adapter: postgresql
   # encoding: unicode
