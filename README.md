@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## タイトル
 
-Things you may want to cover:
+ToDo.Projects(Ver:1.0)
 
-* Ruby version
+## このアプリについて
+これからやること(To-Do)を記述し、難易度や重要度、期限を設定することができるアプリです。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使い方
