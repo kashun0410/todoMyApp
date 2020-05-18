@@ -24,13 +24,12 @@ class TodoListsController < ApplicationController
   end
 
   def destroy
-    @todoLists = TodoList.find(params[:id])
-    @todoLists.destroy
+    todoList = TodoList.find(params[:id])
+    todoList.destroy
     redirect_to root_path
   end
 
   private
-
   def post_params
     params.require(:todo_list).permit(:title, :content, :lank, :star, :deadline_date).merge(user_id: current_user.id)
   end

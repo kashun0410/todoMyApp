@@ -1,13 +1,6 @@
 .main-list
   - @todoLists.each do |todo_list|
     .task
-      - if todo_list.user_id == current_user.id
-        .task__delete
-          = link_to todo_list_path(todo_list), method: :delete, class: :"task__delete__link", data: {confirm: "本当に削除しますか？"} do
-            = icon('fas', 'times')
-      - else
-        .task__delete--alt
-          = icon('fas', 'times')
       .task__title
         = todo_list.title
       .task__creater
