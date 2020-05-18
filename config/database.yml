@@ -49,13 +49,16 @@ test:
 #
 production:
 
-
   <<: *default
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
+  database: todoMyApp_production
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
+
+  
+  # heroku用
+  
   # <<: *default
-  # database: todoMyApp_production
-  # username: root
-  # password: <%= ENV['DATABASE_PASSWORD'] %>
-  # socket: /var/lib/mysql/mysql.sock
+  # adapter: postgresql
+  # encoding: unicode
+  # pool: 5
